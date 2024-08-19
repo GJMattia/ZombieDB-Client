@@ -1,3 +1,60 @@
 .NavBar {
-  background-color: red;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  background-color: black;
+  user-select: none;
+  padding: 0.5rem;
+}
+
+.ZombieDB:hover {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
+.NavOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+}
+
+.NavOptions > li {
+  font-weight: 900;
+}
+
+.NavOptions > li:hover {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
+.Account:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.AccountList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 10rem;
+  background-color: black;
+  position: absolute;
+  top: 8%;
+  right: 12.5%;
+}
+
+.AccountList > li {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.AccountList > li:hover {
+  background-color: gray;
+  cursor: pointer;
 }

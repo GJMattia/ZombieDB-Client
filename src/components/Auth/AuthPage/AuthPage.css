@@ -11,6 +11,7 @@
   border-radius: 0.5rem;
   border: 1px dotted white;
   user-select: none;
+  margin-top: 3rem;
 }
 
 .AuthHeader {
