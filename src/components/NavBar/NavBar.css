@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-evenly;
   color: white;
-  background-color: black;
+  background-color: rgb(18, 18, 18);
   user-select: none;
   padding: 0.5rem;
 }

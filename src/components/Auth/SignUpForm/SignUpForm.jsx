@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { signUp } from "../../../../utilities/user-services";
 import "./SignUpForm.css";
+import { createAccount } from "../../../../utilities/account-api";
 
 export default function SignUpForm({ setUser }) {
   const [formData, setFormData] = useState({
@@ -57,6 +58,7 @@ export default function SignUpForm({ setUser }) {
       const { error, confirm, ...data } = formData;
       const user = await signUp(data);
       setUser(user);
+      createAccount({ userID: user._id });
     } catch (error) {
       setFormData({ ...formData, error: "Sign Up Failed - Try Again" });
     }

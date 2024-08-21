@@ -3,7 +3,7 @@
   width: 70%;
   height: 80%;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 1rem;
   margin: 1rem;
   user-select: none;
@@ -13,11 +13,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: white;
+  justify-content: flex-start;
   padding: 1rem;
   grid-column: 1 / 2;
   grid-row: 1 / 4;
+  background-color: #0b111a;
+  color: white;
+  border-radius: 0.5rem;
+  border: 1px dotted rgb(193, 193, 193);
 }
 
 .Bio {
@@ -25,10 +28,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
   padding: 1rem;
-  grid-column: 2 / 3; /* Start at column 2, end before column 3 */
-  grid-row: 1 / 2; /* Row 1 */
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: #18335b;
+  color: white;
+  border-radius: 0.5rem;
+  border: 1px dotted rgb(193, 193, 193);
 }
 
 .TopMaps {
@@ -38,6 +44,10 @@
   justify-content: center;
   background-color: white;
   padding: 1rem;
+  background-color: #103873;
+  color: white;
+  border-radius: 0.5rem;
+  border: 1px dotted rgb(193, 193, 193);
 }
 
 .TopWW {
@@ -45,8 +55,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
   padding: 1rem;
+  background-color: #132744;
+  color: white;
+  border-radius: 0.5rem;
+  border: 1px dotted rgb(193, 193, 193);
 }
 
 .SocialMedia {
@@ -54,14 +67,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
   padding: 1rem;
+  background-color: #1e3963;
+  color: white;
+  border-radius: 0.5rem;
+  border: 1px dotted rgb(193, 193, 193);
 }
 
 .ProfilePicture {
-  width: 5rem;
+  width: 8rem;
 }
 
 .Verify {
   margin: 2rem;
+}
+
+.PerkList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  background-color: black;
+  position: absolute;
+}
+
+.PerkList > li {
+  margin: 1rem;
 }
