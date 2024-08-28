@@ -5,6 +5,7 @@ import AuthPage from "../Auth/AuthPage/AuthPage";
 import NavBar from "../NavBar/NavBar";
 import AccountPage from "../AccountPage/AccountPage";
 import Home from "../Home/Home";
+import Verify from "../Verify/Verify";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,11 @@ function App() {
           element={<AccountPage user={user} setUser={setUser} />}
         />
         <Route path="/login" element={<AuthPage setUser={setUser} />} />
+
+        <Route
+          path="/verify"
+          element={<Verify user={user} setUser={setUser} />}
+        />
       </Routes>
     </div>
   );

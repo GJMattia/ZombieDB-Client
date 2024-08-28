@@ -1,15 +1,13 @@
 import "./AccountPage.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
-import { verifyEmail } from "../../../utilities/user-api";
-import Jug from "../../assets/images/perks/jug.webp";
 import { getAccount } from "../../../utilities/account-api";
 import Perks from "../../assets/data/profilepics.json";
+import { useNavigate } from "react-router-dom";
 
 export default function AccountPage({ user, setUser }) {
+  const navigate = useNavigate();
+
   const [account, setAccount] = useState(null);
-  let [code, setCode] = useState("");
-  let [error, setError] = useState("please verify");
 
   useEffect(function () {
     async function getAccountData() {
@@ -23,37 +21,15 @@ export default function AccountPage({ user, setUser }) {
     getAccountData();
   }, []);
 
-  const handleChange = (event) => {
-    const newValue = event.target.value;
-    setCode(newValue);
-  };
+  function formatDate(dateString) {
+    const date = new Date(dateString);
 
-  async function verify() {
-    try {
-      let response = await verifyEmail({ code: code });
-      setError(response.message);
-      setUser(response.user);
-      console.log(response);
-    } catch (error) {
-      console.error("error verifying".error);
-    }
+    const month = (date.getUTCMonth() + 1).toString().padStart(2, "0"); // Months are 0-based
+    const day = date.getUTCDate().toString().padStart(2, "0");
+    const year = date.getUTCFullYear();
+
+    return `${month}/${day}/${year}`;
   }
-
-  const sendVerificationEmail = async () => {
-    try {
-      const response = await axios.post(
-        "http://localhost:4741/send-verification-email",
-        {
-          email: user.email,
-          code: user.code,
-        }
-      );
-      setError("Email sent successfully");
-      console.log("Email sent successfully:", response.data);
-    } catch (error) {
-      console.error("Error sending email:", error);
-    }
-  };
 
   return (
     <div className="AccountPage">
@@ -62,12 +38,26 @@ export default function AccountPage({ user, setUser }) {
           <div className="Profile">
             <img className="ProfilePicture" src={Perks[account.pic].img} />
             <h1>{user.name}</h1>
-            <p>Created at {user.createdAt}</p>
+            <p>Account Created on {formatDate(user.createdAt)}</p>
             <p>
               Birthday: {user.birthday.mm}/{user.birthday.dd}/
               {user.birthday.yyyy}
             </p>
             <p>Verified: {user.verified.toString()}</p>
+            {!user.verified && (
+              <>
+                <p className="Red">
+                  Your account is not verified, some of your functions will be
+                  limited.
+                </p>
+                <button
+                  className="VerifyBtn"
+                  onClick={() => navigate("/verify")}
+                >
+                  Click here to verify your email address!
+                </button>
+              </>
+            )}
           </div>
 
           <div className="Bio">

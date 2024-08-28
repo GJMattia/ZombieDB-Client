@@ -21,6 +21,22 @@
   color: white;
   border-radius: 0.5rem;
   border: 1px dotted rgb(193, 193, 193);
+  text-align: center;
+}
+
+.VerifyBtn {
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: dodgerblue;
+  width: 95%;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.VerifyBtn:hover {
+  background-color: rgb(97, 176, 255);
 }
 
 .Bio {
@@ -76,10 +92,6 @@
 
 .ProfilePicture {
   width: 8rem;
-}
-
-.Verify {
-  margin: 2rem;
 }
 
 .PerkList {
