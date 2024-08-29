@@ -1,0 +1,12 @@
+.GameNav {
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  background-color: rgb(42, 42, 42);
+  margin-top: 28.5rem;
+  height: 40%;
+}

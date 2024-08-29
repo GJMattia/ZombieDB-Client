@@ -2,10 +2,13 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import * as userService from "../../../utilities/user-services";
 import "./NavBar.css";
+import GameNav from "../GameNav/GameNav";
 
 export default function NavBar({ user, setUser }) {
   const navigate = useNavigate();
+
   let [accountList, setAccountList] = useState(false);
+  let [gameNav, setgameNav] = useState(false);
 
   function handleLogOut() {
     userService.logOut();
@@ -19,7 +22,7 @@ export default function NavBar({ user, setUser }) {
         ZombieDB
       </h1>
       <ul className="NavOptions">
-        <li>Games ⋁</li>
+        <li onClick={() => setgameNav(!gameNav)}>Games ⋁</li>
         <li>Player Locator ⋁</li>
         <li>About ⋁</li>
       </ul>
@@ -39,6 +42,8 @@ export default function NavBar({ user, setUser }) {
           )}
         </ul>
       )}
+
+      {gameNav && <GameNav />}
     </nav>
   );
 }

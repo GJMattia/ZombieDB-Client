@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Quick Revive",
+    "effect": "Revive Teammates 50% faster.",
+    "price": 1500,
+    "img": "/src/assets/images/perks/qr.webp"
+  },
+  {
+    "name": "Juggernog",
+    "des": "Once purchased during a game for 2500 points, it increases the players health allowing them to take more damage from enemies. Since its introduction in Verrückt, it's been a highly desirable addition to most player's arsenal in every game.",
+    "effect": "Increased health from 100 to 250.",
+    "price": 2500,
+    "img": "/src/assets/images/perks/jug.webp",
+    "machine": "/src/assets/images/perks/jug-mac.webp"
+  },
+  {
+    "name": "Double Tap Root Beer 2",
+    "effect": "Increases the rate of fire but also shoots two bullets for every one round, essentially doubling damage output.",
+    "price": 2000,
+    "img": "/src/assets/images/perks/dt2.webp"
+  },
+  {
+    "name": "Speed Cola",
+    "effect": "Increases reload speed by 50 percent and massively increases the speed at which players can rebuild barriers.",
+    "price": 3000,
+    "img": "/src/assets/images/perks/speed.webp"
+  },
+  {
+    "name": "Stamina-Up",
+    "effect": "Increases Sprint Endurance and Sprint Speed. Stamina also regenerates faster.",
+    "price": 2000,
+    "img": "/src/assets/images/perks/stam.webp"
+  },
+  {
+    "name": "PhD Flopper",
+    "effect": "Gives complete immunity to all explosive and falling damage, and dolphin diving now makes an explosion.",
+    "price": 2000,
+    "img": "/src/assets/images/perks/phd.webp"
+  },
+  {
+    "name": "Deadshot Daiquiri",
+    "effect": "Removes scope sway as well as reduces recoil and increases hip-fire accuracy. Additionally, this Perk will 'snap' the auto-aim sight to the Zombie's critical areas when ADS'ing rather than their torso.",
+    "price": 1500,
+    "img": "/src/assets/images/perks/ds.webp"
+  },
+  {
+    "name": "Mule Kick",
+    "effect": "Allows an additional weapon to be carried, for a total of three. The most recently purchased weapon will be lost when downed.",
+    "price": 4000,
+    "img": "/src/assets/images/perks/mk.webp"
+  },
+  {
+    "name": "Tombstone Soda",
+    "effect": "Players that die can run back to the same spot to recover all perks and weapons. A limited time until the power-up is lost.",
+    "price": 2000,
+    "img": "/src/assets/images/perks/ts.webp"
+  },
+  {
+    "name": "Who's Who",
+    "effect": "When downed, players spawn nearby as a 'doppelganger' and must go and revive their bodies to come back up with everything but the Who's Who Perk.",
+    "price": 2000,
+    "img": "/src/assets/images/perks/ww.webp"
+  },
+  {
+    "name": "Electric Cherry",
+    "effect": "Reloading surrounds the player with an electric effect, damaging nearby Zombies and briefly stunning them. Damage and radius are increased the lower the magazine is when reloading.",
+    "price": 2000,
+    "img": "/src/assets/images/perks/ec.webp"
+  },
+  {
+    "name": "Vulture Aid Elixir",
+    "effect": "See stuff through walls, green gas, find ammo on ground",
+    "price": 3000,
+    "img": "/src/assets/images/perks/va.webp"
+  },
+  {
+    "name": "Der Wunderfizz",
+    "effect": "Generates a random perk.",
+    "price": 1500,
+    "img": "/src/assets/images/perks/dw.webp"
+  },
+  {
+    "name": "Widow's Wine",
+    "effect": "Makes spider web",
+    "price": 4000,
+    "img": "/src/assets/images/perks/wine.webp"
+  }
+]

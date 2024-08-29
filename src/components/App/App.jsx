@@ -6,6 +6,9 @@ import NavBar from "../NavBar/NavBar";
 import AccountPage from "../AccountPage/AccountPage";
 import Home from "../Home/Home";
 import Verify from "../Verify/Verify";
+import PerkHome from "../PerkHome/PerkHome";
+import PerkPage from "../PerkPage/PerkPage";
+import Perks from "../../assets/data/perks.json";
 import "./App.css";
 
 function App() {
@@ -21,6 +24,11 @@ function App() {
           element={<AccountPage user={user} setUser={setUser} />}
         />
         <Route path="/login" element={<AuthPage setUser={setUser} />} />
+        <Route
+          path="/perks"
+          element={<PerkHome user={user} setUser={setUser} perks={Perks} />}
+        />
+        <Route path="/perks/:perkName" element={<PerkPage perks={Perks} />} />
 
         <Route
           path="/verify"

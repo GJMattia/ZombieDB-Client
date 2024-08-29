@@ -1,0 +1,42 @@
+.PerkPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #0b111a;
+  color: white;
+  width: 70%;
+
+  user-select: none;
+  margin: 1rem;
+  border: 1px dotted rgb(163, 163, 163);
+}
+
+.PerkImg {
+  width: 5rem;
+}
+
+.PerkMachine {
+  width: 5rem;
+}
+
+.PerkGrid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+
+.PerkGrid > p {
+  width: 50%;
+}
+
+.PerkInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid yellow;
+}
