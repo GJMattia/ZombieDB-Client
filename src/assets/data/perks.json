@@ -84,5 +84,11 @@
     "effect": "Makes spider web",
     "price": 4000,
     "img": "/src/assets/images/perks/wine.webp"
+  },
+  {
+    "name": "Elemental Pop",
+    "effect": "Random ATT will go off from time to time.",
+    "price": 3000,
+    "img": "/src/assets/images/perks/epop.png"
   }
 ]

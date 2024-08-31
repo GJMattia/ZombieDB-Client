@@ -37,6 +37,10 @@ a {
   cursor: pointer;
 }
 
+.Blur {
+  filter: blur(5px);
+}
+
 .NotYet {
   background-color: #9ba0ab;
   pointer-events: none;
@@ -56,4 +60,68 @@ a {
 
 .Green {
   color: lawngreen;
+}
+
+.SettingsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  width: 50%;
+  position: absolute;
+  top: 20%;
+  background-color: #0b111a;
+  color: white;
+  border-radius: 0.5rem;
+  border: 1px dotted white;
+  user-select: none;
+}
+
+.SettingsBox > h1 {
+  width: 90%;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #3e4759;
+}
+
+.SettingsBox > p {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #3e4759;
+}
+
+.SettingsBtns {
+  border-top: 1px solid #3e4759;
+  padding-top: 0.5rem;
+  width: 90%;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.SettingsBtn {
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: dodgerblue;
+  width: 30%;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.SettingsBtn:hover {
+  filter: brightness(130%);
+}
+
+.Update {
+  background-color: dodgerblue;
+}
+
+.Cancel {
+  background-color: crimson;
 }

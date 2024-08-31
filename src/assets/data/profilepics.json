@@ -1,62 +1,18 @@
 [
   {
-    "name": "Quick Revive",
-    "img": "src/assets/images/perks/qr.webp"
+    "name": "Revive Me Bro",
+    "img": "src/assets/images/profile/p1.png"
   },
   {
-    "name": "Jug",
-    "img": "src/assets/images/perks/jug.webp"
+    "name": "Skullington",
+    "img": "src/assets/images/profile/p2.webp"
   },
   {
-    "name": "Double Tap",
-    "img": "src/assets/images/perks/dt.webp"
+    "name": "MC Zombie",
+    "img": "src/assets/images/profile/p3.png"
   },
   {
-    "name": "Speed Cola",
-    "img": "src/assets/images/perks/speed.webp"
-  },
-  {
-    "name": "Stamina Up",
-    "img": "src/assets/images/perks/stam.webp"
-  },
-  {
-    "name": "PHD",
-    "img": "src/assets/images/perks/phd.webp"
-  },
-  {
-    "name": "Deadshot",
-    "img": "src/assets/images/perks/ds.webp"
-  },
-  {
-    "name": "Mule Kick",
-    "img": "src/assets/images/perks/mk.webp"
-  },
-  {
-    "name": "Double Tap 2.0",
-    "img": "src/assets/images/perks/dt2.webp"
-  },
-  {
-    "name": "Tombstone Soda",
-    "img": "src/assets/images/perks/ts.webp"
-  },
-  {
-    "name": "Who's Who",
-    "img": "src/assets/images/perks/ww.webp"
-  },
-  {
-    "name": "Electric Cherry",
-    "img": "src/assets/images/perks/ec.webp"
-  },
-  {
-    "name": "Vulture Aid Elixer",
-    "img": "src/assets/images/perks/va.webp"
-  },
-  {
-    "name": "Der Wunderfiz",
-    "img": "src/assets/images/perks/dw.webp"
-  },
-  {
-    "name": "Widow's Wine",
-    "img": "src/assets/images/perks/wine.webp"
+    "name": "935",
+    "img": "src/assets/images/profile/p4.jpg"
   }
 ]

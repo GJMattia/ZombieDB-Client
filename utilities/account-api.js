@@ -14,3 +14,12 @@ export async function createAccount(userID) {
 export async function getAccount() {
   return sendRequest(`${BASE_URL}/getaccount`);
 }
+
+//Changing ProfilePic
+export async function updatePP(pic) {
+  try {
+    return await sendRequest(`${BASE_URL}/updatepp`, "PUT", pic);
+  } catch (error) {
+    console.error("error changing profile pic", error);
+  }
+}
