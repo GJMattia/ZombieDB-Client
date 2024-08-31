@@ -1,10 +1,38 @@
 import "./EditPerks.css";
 import Perks from "../../assets/data/perks.json";
 import { useState } from "react";
+import { updatePerks } from "../../../utilities/account-api";
 
 export default function EditPerks({ account, setAccount, setSettings }) {
-  const [perk, setPerk] = useState(0);
+  const [perk, setPerk] = useState(account.perks[0]);
+  const [perks, setPerks] = useState(account.perks);
 
+  async function savePerks() {
+    try {
+      let response = await updatePerks({ perks: perks });
+      setAccount((prevAccount) => ({
+        ...prevAccount,
+        perks: response,
+      }));
+
+      setSettings((prevSettings) => ({
+        ...prevSettings,
+        perks: false,
+      }));
+    } catch (error) {
+      console.error("error updating perks".error);
+    }
+  }
+
+  const removePerk = () => {
+    setPerks(perks.filter((p) => p !== perk));
+  };
+
+  const addPerk = () => {
+    if (!perks.includes(perk) && perks.length < 4) {
+      setPerks([...perks, perk]);
+    }
+  };
   return (
     <div className="SettingsBox">
       <h1>Select your favorite perks!</h1>
@@ -13,11 +41,12 @@ export default function EditPerks({ account, setAccount, setSettings }) {
           <h5>Current Perks:</h5>
 
           <div className="AccountPerks2">
-            {account.perks.map((perkIndex, index) => (
+            {perks.map((perkIndex, index) => (
               <img
                 key={index}
                 src={Perks[perkIndex].img}
                 alt={`Perk ${perkIndex}`}
+                onClick={() => setPerk(perkIndex)}
               />
             ))}
           </div>
@@ -39,8 +68,12 @@ export default function EditPerks({ account, setAccount, setSettings }) {
           <img className="SelectedPerk" src={Perks[perk].img} />
           <h4>{Perks[perk].name}</h4>
           <div className="SettingsBtns">
-            <button className="SettingsBtn Cancel">Remove</button>
-            <button className="SettingsBtn Update">Add</button>
+            <button onClick={removePerk} className="SettingsBtn Cancel">
+              Remove
+            </button>
+            <button onClick={addPerk} className="SettingsBtn Update">
+              Add
+            </button>
           </div>
         </div>
       </div>
@@ -56,7 +89,9 @@ export default function EditPerks({ account, setAccount, setSettings }) {
         >
           Cancel
         </button>
-        <button className="SettingsBtn Update">Update</button>
+        <button onClick={savePerks} className="SettingsBtn Update">
+          Update
+        </button>
       </div>
     </div>
   );

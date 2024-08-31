@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Nacht der Untoten",
+    "img": "src/assets/images/maps/nact.webp"
+  },
+  {
+    "name": "Verrückt",
+    "img": "src/assets/images/maps/ver.webp"
+  },
+  {
+    "name": "Shi no Numa",
+    "img": "src/assets/images/maps/shino.webp"
+  },
+  {
+    "name": "Der Riese",
+    "img": "src/assets/images/maps/der.jpg"
+  }
+]

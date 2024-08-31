@@ -5,7 +5,10 @@ export default function GameNav() {
   const navigate = useNavigate();
   return (
     <div className="GameNav">
-      <p onClick={() => navigate("/perks")}>Perks</p>
+      <ul>
+        <li onClick={() => navigate("/perks")}>Perks</li>
+        <li onClick={() => navigate("/maps")}>Maps</li>
+      </ul>
     </div>
   );
 }

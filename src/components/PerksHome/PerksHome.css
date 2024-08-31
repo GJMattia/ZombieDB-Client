@@ -1,0 +1,30 @@
+.PerkHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  color: white;
+  height: 50%;
+}
+
+.PerkList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.PerkList > li {
+  text-align: center;
+  display: flex;
+  width: 10rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.PerkList > li > img {
+  width: 5rem;
+}

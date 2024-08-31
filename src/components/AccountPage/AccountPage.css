@@ -110,8 +110,8 @@
 .EditProfilePic {
   position: absolute;
   width: 1.5rem;
-  right: 7rem;
-  top: 6rem;
+  right: 23%;
+  top: 13%;
   filter: invert();
 }
 
@@ -122,8 +122,8 @@
 .EditPerks {
   position: absolute;
   width: 1rem;
-  right: 5rem;
-  top: 16.5rem;
+  right: 15%;
+  top: 37%;
   filter: invert();
 }
 
@@ -152,7 +152,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 60%;
+  width: 70%;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dotted rgb(193, 193, 193);
 }
 
 .AccountPerks > img {

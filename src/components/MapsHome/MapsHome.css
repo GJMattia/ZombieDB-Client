@@ -1,0 +1,30 @@
+.MapsHome {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  color: white;
+}
+
+.MapsList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+}
+
+.MapsList > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  color: black;
+}
+
+.MapImg {
+  width: 15rem;
+}

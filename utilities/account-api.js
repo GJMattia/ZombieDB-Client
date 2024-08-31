@@ -23,3 +23,12 @@ export async function updatePP(pic) {
     console.error("error changing profile pic", error);
   }
 }
+
+//Updating profile perks
+export async function updatePerks(perks) {
+  try {
+    return await sendRequest(`${BASE_URL}/updateperks`, "PUT", perks);
+  } catch (error) {
+    console.error("error updating perks", error);
+  }
+}

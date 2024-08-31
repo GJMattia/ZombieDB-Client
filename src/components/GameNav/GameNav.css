@@ -9,4 +9,12 @@
   background-color: rgb(42, 42, 42);
   margin-top: 28.5rem;
   height: 40%;
+  z-index: 10;
+}
+
+.GameNav > ul > li {
+  font-size: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  color: crimson;
 }
