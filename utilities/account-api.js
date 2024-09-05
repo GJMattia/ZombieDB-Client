@@ -32,3 +32,12 @@ export async function updatePerks(perks) {
     console.error("error updating perks", error);
   }
 }
+
+//Updating Bio
+export async function updateBio(bio) {
+  try {
+    return await sendRequest(`${BASE_URL}/updatebio`, "PUT", bio);
+  } catch (error) {
+    console.error("error updating bio", error);
+  }
+}

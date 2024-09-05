@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import Edit from "../../assets/images/icons/edit.png";
 import EditProfilePic from "../EditProfilePic/EditProfilePic";
 import EditPerks from "../EditPerks/EditPerks";
+import EditBio from "../EditBio/EditBio";
 
 export default function AccountPage({ user, setUser }) {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ export default function AccountPage({ user, setUser }) {
   const [settings, setSettings] = useState({
     epp: false,
     perks: false,
+    bio: false,
   });
 
   useEffect(function () {
@@ -54,6 +56,14 @@ export default function AccountPage({ user, setUser }) {
 
       {settings.perks && (
         <EditPerks
+          account={account}
+          setAccount={setAccount}
+          setSettings={setSettings}
+        />
+      )}
+
+      {settings.bio && (
+        <EditBio
           account={account}
           setAccount={setAccount}
           setSettings={setSettings}
@@ -123,6 +133,16 @@ export default function AccountPage({ user, setUser }) {
             </div>
 
             <div className="Bio">
+              <img
+                className="EditBio"
+                src={Edit}
+                onClick={() =>
+                  setSettings((prevSettings) => ({
+                    ...prevSettings,
+                    bio: true,
+                  }))
+                }
+              />
               <h1>Bio</h1>
               <p>{account.bio}</p>
             </div>

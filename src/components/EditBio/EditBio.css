@@ -1,0 +1,15 @@
+.BioArea {
+  width: 80%;
+  height: 10rem;
+  resize: none;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.BioArea {
+  border: 1px solid #3e4759;
+}
+.BioArea:focus {
+  outline: none;
+  border: 1px solid dodgerblue;
+}

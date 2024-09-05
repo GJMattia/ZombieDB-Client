@@ -57,10 +57,11 @@
 }
 
 .Bio {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 1rem;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
@@ -68,6 +69,18 @@
   color: white;
   border-radius: 0.5rem;
   border: 1px dotted rgb(193, 193, 193);
+}
+
+.Bio > h1 {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  width: 70%;
+  margin: 0.5rem;
+  border-bottom: 1px solid rgb(193, 193, 193);
+}
+
+.Bio > p {
+  width: 85%;
 }
 
 .TopMaps {
@@ -113,21 +126,14 @@
   right: 23%;
   top: 13%;
   filter: invert();
-}
-
-.EditProfilePic:hover {
   cursor: pointer;
 }
-
 .EditPerks {
   position: absolute;
   width: 1rem;
   right: 15%;
   top: 37%;
   filter: invert();
-}
-
-.EditPerks:hover {
   cursor: pointer;
 }
 
@@ -159,4 +165,13 @@
 
 .AccountPerks > img {
   width: 2.5rem;
+}
+
+.EditBio {
+  position: absolute;
+  width: 1.5rem;
+  right: 5%;
+  top: 5%;
+  filter: invert();
+  cursor: pointer;
 }
