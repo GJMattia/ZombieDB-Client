@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.LoginPage > p {
+  text-align: center;
+}
+
 .LoginForm {
   width: 100%;
   display: flex;

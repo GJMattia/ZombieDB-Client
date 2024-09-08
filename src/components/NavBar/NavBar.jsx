@@ -22,12 +22,13 @@ export default function NavBar({ user, setUser }) {
         ZombieDB
       </h1>
       <ul className="NavOptions">
-        <li onClick={() => setgameNav(!gameNav)}>Games ⋁</li>
-        <li>Player Locator ⋁</li>
-        <li>About ⋁</li>
+        <li onClick={() => setgameNav(!gameNav)}>Games</li>
+        <li onClick={() => navigate("/feed")}>Feed</li>
+        {/* <li>Player Locator</li>
+        <li>About</li> */}
       </ul>
       <h3 className="Account" onClick={() => setAccountList(!accountList)}>
-        Account ⋁
+        Account
       </h3>
       {accountList && (
         <ul className="AccountList">

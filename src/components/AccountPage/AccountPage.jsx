@@ -1,6 +1,5 @@
 import "./AccountPage.css";
-import { useState, useEffect } from "react";
-import { getAccount } from "../../../utilities/account-api";
+import { useState } from "react";
 import ProfilePics from "../../assets/data/profilepics.json";
 import Perks from "../../assets/data/perks.json";
 import { useNavigate } from "react-router-dom";
@@ -9,28 +8,14 @@ import EditProfilePic from "../EditProfilePic/EditProfilePic";
 import EditPerks from "../EditPerks/EditPerks";
 import EditBio from "../EditBio/EditBio";
 
-export default function AccountPage({ user, setUser }) {
+export default function AccountPage({ user, account, setAccount }) {
   const navigate = useNavigate();
-
-  const [account, setAccount] = useState(null);
 
   const [settings, setSettings] = useState({
     epp: false,
     perks: false,
     bio: false,
   });
-
-  useEffect(function () {
-    async function getAccountData() {
-      try {
-        const response = await getAccount();
-        setAccount(response);
-      } catch (error) {
-        console.error("Error Fetching Questions", error);
-      }
-    }
-    getAccountData();
-  }, []);
 
   function formatDate(dateString) {
     const date = new Date(dateString);
@@ -132,39 +117,41 @@ export default function AccountPage({ user, setUser }) {
               )}
             </div>
 
-            <div className="Bio">
-              <img
-                className="EditBio"
-                src={Edit}
-                onClick={() =>
-                  setSettings((prevSettings) => ({
-                    ...prevSettings,
-                    bio: true,
-                  }))
-                }
-              />
-              <h1>Bio</h1>
-              <p>{account.bio}</p>
-            </div>
+            <div className="Profile4">
+              <div className="Bio">
+                <img
+                  className="EditBio"
+                  src={Edit}
+                  onClick={() =>
+                    setSettings((prevSettings) => ({
+                      ...prevSettings,
+                      bio: true,
+                    }))
+                  }
+                />
+                <h1>Bio</h1>
+                <p>{account.bio}</p>
+              </div>
 
-            <div className="SocialMedia">
-              <h1>Social Media</h1>
-              <p>{account.social[0]}</p>
-              <p>{account.social[1]}</p>
-            </div>
+              <div className="SocialMedia">
+                <h1>Social Media</h1>
+                <p>{account.social[0]}</p>
+                <p>{account.social[1]}</p>
+              </div>
 
-            <div className="TopMaps">
-              <h1>Top 3 Maps</h1>
-              <p>{account.topmaps[0]}</p>
-              <p>{account.topmaps[1]}</p>
-              <p>{account.topmaps[2]}</p>
-            </div>
+              <div className="TopMaps">
+                <h1>Top 3 Maps</h1>
+                <p>{account.topmaps[0]}</p>
+                <p>{account.topmaps[1]}</p>
+                <p>{account.topmaps[2]}</p>
+              </div>
 
-            <div className="TopWW">
-              <h1>Top 3 Wonder Weapons</h1>
-              <p>{account.topww[0]}</p>
-              <p>{account.topww[1]}</p>
-              <p>{account.topww[2]}</p>
+              <div className="TopWW">
+                <h1>Top 3 Wonder Weapons</h1>
+                <p>{account.topww[0]}</p>
+                <p>{account.topww[1]}</p>
+                <p>{account.topww[2]}</p>
+              </div>
             </div>
           </>
         )}

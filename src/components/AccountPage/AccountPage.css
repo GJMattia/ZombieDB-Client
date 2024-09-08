@@ -4,17 +4,15 @@
   align-items: center;
   justify-content: flex-start;
   width: 70%;
-  height: 80%;
+  margin: 2rem;
 }
 
 .AccountGrid {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
   width: 100%;
-  height: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1rem;
-  margin: 1rem;
   user-select: none;
 }
 
@@ -32,6 +30,8 @@
   border-radius: 0.5rem;
   border: 1px dotted rgb(193, 193, 193);
   text-align: center;
+  height: 100%;
+  margin-right: 0.5rem;
 }
 
 .Profile > h1 {
@@ -54,6 +54,13 @@
 
 .VerifyBtn:hover {
   background-color: rgb(97, 176, 255);
+}
+
+.Profile4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
 }
 
 .Bio {
@@ -123,16 +130,16 @@
 .EditProfilePic {
   position: absolute;
   width: 1.5rem;
-  right: 23%;
-  top: 13%;
+  right: 12%;
+  top: 15%;
   filter: invert();
   cursor: pointer;
 }
 .EditPerks {
   position: absolute;
   width: 1rem;
-  right: 15%;
-  top: 37%;
+  right: 10%;
+  top: 42%;
   filter: invert();
   cursor: pointer;
 }

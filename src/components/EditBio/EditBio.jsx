@@ -35,7 +35,7 @@ export default function EditBio({ account, setAccount, setSettings }) {
         minLength={1}
         maxLength={200}
         onChange={handleChange}
-      ></textarea>
+      />
       <div className="SettingsBtns">
         <button
           onClick={() =>
