@@ -1,11 +1,52 @@
 import "./Feed.css";
 import { useState, useEffect } from "react";
 import ProfilePics from "../../assets/data/profilepics.json";
-import { createPost, getPosts } from "../../../utilities/post-api";
+import {
+  createPost,
+  getPosts,
+  likePost,
+  dislikePost,
+  deletePost,
+} from "../../../utilities/post-api";
 
 export default function Feed({ user, account, setAccount }) {
   const [content, setContent] = useState("");
   const [posts, setPosts] = useState(null);
+
+  async function sendLike(postID) {
+    try {
+      let response = await likePost({ id: postID });
+      setPosts((prevPosts) =>
+        prevPosts.map((post) => (post._id === postID ? response : post))
+      );
+    } catch (error) {
+      console.error("error like post".error);
+    }
+  }
+
+  async function sendDelete(postID) {
+    try {
+      let response = await deletePost({ id: postID });
+      if (response === true) {
+        setPosts((prevPosts) =>
+          prevPosts.filter((post) => post._id !== postID)
+        );
+      }
+    } catch (error) {
+      console.error("error delete post".error);
+    }
+  }
+
+  async function sendDislike(postID) {
+    try {
+      let response = await dislikePost({ id: postID });
+      setPosts((prevPosts) =>
+        prevPosts.map((post) => (post._id === postID ? response : post))
+      );
+    } catch (error) {
+      console.error("error dislike post".error);
+    }
+  }
 
   async function sendPost() {
     try {
@@ -65,9 +106,16 @@ export default function Feed({ user, account, setAccount }) {
             <li key={post._id} className="Post">
               <h5>Posted by {post.user}</h5>
               <p>{post.content}</p>
+              <button className="Red" onClick={() => sendDelete(post._id)}>
+                delete post
+              </button>
               <div className="PostRating">
-                <button>Like - {post.rating.likes}</button>
-                <button>Dislike - {post.rating.dislikes}</button>
+                <button onClick={() => sendLike(post._id)}>
+                  Like - {post.rating.likes}
+                </button>
+                <button onClick={() => sendDislike(post._id)}>
+                  Dislike - {post.rating.dislikes}
+                </button>
               </div>
             </li>
           ))}

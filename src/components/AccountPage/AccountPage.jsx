@@ -100,7 +100,9 @@ export default function AccountPage({ user, account, setAccount }) {
                 Birthday: {user.birthday.mm}/{user.birthday.dd}/
                 {user.birthday.yyyy}
               </p>
-              <p>Verified: {user.verified.toString()}</p>
+              <p className={user.verified ? "Green" : ""}>
+                Verified: {user.verified.toString()}
+              </p>
               {!user.verified && (
                 <>
                   <p className="Red">

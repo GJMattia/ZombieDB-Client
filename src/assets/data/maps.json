@@ -14,5 +14,29 @@
   {
     "name": "Der Riese",
     "img": "src/assets/images/maps/der.jpg"
+  },
+  {
+    "name": "Kino Der Toten",
+    "img": "src/assets/images/maps/kino.webp"
+  },
+  {
+    "name": "Five",
+    "img": "src/assets/images/maps/five.webp"
+  },
+  {
+    "name": "Ascension",
+    "img": "src/assets/images/maps/ascen.webp"
+  },
+  {
+    "name": "Call of the Dead",
+    "img": "src/assets/images/maps/call2.webp"
+  },
+  {
+    "name": "Shangri-La",
+    "img": "src/assets/images/maps/shang.webp"
+  },
+  {
+    "name": "Moon",
+    "img": "src/assets/images/maps/moon.webp"
   }
 ]
