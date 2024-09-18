@@ -104,17 +104,28 @@ export default function Feed({ user, account, setAccount }) {
         {posts &&
           posts.map((post) => (
             <li key={post._id} className="Post">
-              <h5>Posted by {post.user}</h5>
+              <h5>Posted by {post.user.name}</h5>
               <p>{post.content}</p>
-              <button className="Red" onClick={() => sendDelete(post._id)}>
-                delete post
-              </button>
-              <div className="PostRating">
-                <button onClick={() => sendLike(post._id)}>
-                  Like - {post.rating.likes}
+              {post.user._id === user._id && (
+                <button
+                  className=" DeletePostBtn"
+                  onClick={() => sendDelete(post._id)}
+                >
+                  delete
                 </button>
-                <button onClick={() => sendDislike(post._id)}>
-                  Dislike - {post.rating.dislikes}
+              )}
+              <div className="PostRating">
+                <button
+                  className="LikeBtn Like"
+                  onClick={() => sendLike(post._id)}
+                >
+                  Like {post.likes.value}
+                </button>
+                <button
+                  className="LikeBtn Cancel"
+                  onClick={() => sendDislike(post._id)}
+                >
+                  Dislike {post.dislikes.value}
                 </button>
               </div>
             </li>
