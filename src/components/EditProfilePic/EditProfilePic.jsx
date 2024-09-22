@@ -1,16 +1,16 @@
 import "./EditProfilePic.css";
 import ProfilePics from "../../assets/data/profilepics.json";
 import { useState } from "react";
-import { updatePP } from "../../../utilities/account-api";
+import { updatePP } from "../../../utilities/user-api";
 
-export default function EditProfilePic({ account, setAccount, setSettings }) {
-  const [pic, setPic] = useState(account.pic);
+export default function EditProfilePic({ user, setUser, setSettings }) {
+  const [pic, setPic] = useState(user.pic);
 
   async function updatePic() {
     try {
       let response = await updatePP({ pic: pic });
-      setAccount((prevAccount) => ({
-        ...prevAccount,
+      setUser((prevUser) => ({
+        ...prevUser,
         pic: response,
       }));
 

@@ -24,3 +24,11 @@ export async function resetPW(password) {
 export async function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }
+
+export async function updatePP(pic) {
+  try {
+    return await sendRequest(`${BASE_URL}/updatepp`, "PUT", pic);
+  } catch (error) {
+    console.error("error changing profile pic", error);
+  }
+}

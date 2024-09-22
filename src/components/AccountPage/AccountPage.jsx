@@ -8,7 +8,7 @@ import EditProfilePic from "../EditProfilePic/EditProfilePic";
 import EditPerks from "../EditPerks/EditPerks";
 import EditBio from "../EditBio/EditBio";
 
-export default function AccountPage({ user, account, setAccount }) {
+export default function AccountPage({ user, setUser, account, setAccount }) {
   const navigate = useNavigate();
 
   const [settings, setSettings] = useState({
@@ -33,8 +33,8 @@ export default function AccountPage({ user, account, setAccount }) {
     <div className="AccountPage">
       {settings.epp && (
         <EditProfilePic
-          account={account}
-          setAccount={setAccount}
+          user={user}
+          setUser={setUser}
           setSettings={setSettings}
         />
       )}
@@ -82,7 +82,7 @@ export default function AccountPage({ user, account, setAccount }) {
               <div className="ProfileBox">
                 <img
                   className="ProfilePicture"
-                  src={ProfilePics[account.pic].img}
+                  src={ProfilePics[user.pic].img}
                 />
               </div>
               <div className="AccountPerks">

@@ -9,7 +9,7 @@ import {
   deletePost,
 } from "../../../utilities/post-api";
 
-export default function Feed({ user, account, setAccount }) {
+export default function Feed({ user }) {
   const [content, setContent] = useState("");
   const [posts, setPosts] = useState(null);
 
@@ -81,8 +81,8 @@ export default function Feed({ user, account, setAccount }) {
       <div className="CreatePost">
         <div className="UserInfo">
           <div className="PostUser">
-            {account && (
-              <img className="PostPic" src={ProfilePics[account.pic].img} />
+            {user && (
+              <img className="PostPic" src={ProfilePics[user.pic].img} />
             )}
             <h5>{user.name}</h5>
           </div>
@@ -104,7 +104,11 @@ export default function Feed({ user, account, setAccount }) {
         {posts &&
           posts.map((post) => (
             <li key={post._id} className="Post">
-              <h5>Posted by {post.user.name}</h5>
+              <div className="PostUser">
+                <img className="PostPic" src={ProfilePics[post.user.pic].img} />
+                <h5>{post.user.name}</h5>
+              </div>
+
               <p>{post.content}</p>
               {post.user._id === user._id && (
                 <button

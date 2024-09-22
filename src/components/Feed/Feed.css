@@ -99,17 +99,12 @@
   background-color: #000e22;
 }
 
-.Post > h5 {
-  width: 90%;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgb(159, 159, 159);
-  margin-bottom: 0;
-}
-
 .Post > p {
   text-align: center;
   width: 90%;
+  padding-top: 1rem;
   padding-bottom: 1rem;
+  border-top: 1px solid rgb(159, 159, 159);
   border-bottom: 1px solid rgb(159, 159, 159);
   margin-bottom: 0;
 }

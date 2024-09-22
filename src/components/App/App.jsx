@@ -42,18 +42,14 @@ function App() {
           element={
             <AccountPage
               user={user}
+              setUser={setUser}
               account={account}
               setAccount={setAccount}
             />
           }
         />
 
-        <Route
-          path="/feed"
-          element={
-            <Feed user={user} account={account} setAccount={setAccount} />
-          }
-        />
+        <Route path="/feed" element={<Feed user={user} />} />
         <Route path="/login" element={<AuthPage setUser={setUser} />} />
         <Route
           path="/perks"
